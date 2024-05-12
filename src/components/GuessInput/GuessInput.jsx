@@ -9,12 +9,14 @@ function GuessInput({ handleGuessSubmit }) {
       onSubmit={(event) => {
         event.preventDefault();
         handleGuessSubmit(guessInput);
+        setGuessInput("");
       }}
     >
       <label htmlFor="guess-input">Enter guess:</label>
       <input
         type="text"
         id="guess-input"
+        autoFocus="true"
         minLength={5}
         maxLength={5}
         value={guessInput}
