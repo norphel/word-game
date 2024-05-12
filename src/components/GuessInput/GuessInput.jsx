@@ -16,7 +16,7 @@ function GuessInput({ handleGuessSubmit }) {
       <input
         type="text"
         id="guess-input"
-        autoFocus="true"
+        autoFocus={true}
         minLength={5}
         maxLength={5}
         value={guessInput}
