@@ -1,6 +1,6 @@
 import React from "react";
 
-function GuessInput({ handleGuessSubmit }) {
+function GuessInput({ handleGuessSubmit, isWon }) {
   const [guessInput, setGuessInput] = React.useState("");
 
   return (
@@ -19,6 +19,7 @@ function GuessInput({ handleGuessSubmit }) {
         autoFocus={true}
         minLength={5}
         maxLength={5}
+        disabled={isWon === true || isWon === false}
         value={guessInput}
         onChange={(event) => setGuessInput(event.target.value.toUpperCase())}
       />
